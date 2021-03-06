@@ -1,8 +1,8 @@
 #include <Servo.h> 
 
-int servoPin1 = 3; 
-int servoPin2 = 3; 
-int sensorPin = 3; 
+int servoPin1 = 5; 
+int servoPin2 = 6; 
+int sensorPin = A0; 
 int val;
 
 Servo Servo1,Servo2; 
