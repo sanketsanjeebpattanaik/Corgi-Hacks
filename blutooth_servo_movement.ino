@@ -18,10 +18,12 @@ String voice;
 
 void loop()
 {
-
-while (Serial.available()) //Check if there is an available byte to read
-
-{ delay(10); //Delay added to make thing stable
+  if (Serial.available()>0)
+  {
+    voice="";
+    voice=Serial.readString();
+    Serial.print(voice+'\n');
+    delay(10); //Delay added to make thing stable
 
 char c = Serial.read(); //Conduct a serial read
 
