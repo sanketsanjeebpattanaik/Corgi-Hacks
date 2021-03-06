@@ -4,77 +4,50 @@ int servoPin2 = 6;
 
 Servo Servo1,Servo2;
 
-void setup() {
-  Serial.begin(9600);
-  Servo1.attach(servoPin1);
-  Servo2.attach(servoPin2);
-  
-
-}
-
-
-char c;
 String voice;
 
-void loop()
-{
-  while (Serial.available()>0)
-  {
-    voice="";
-    voice=Serial.readString();
-    Serial.print(voice+'\n');
-    delay(10); //Delay added to make thing stable
 
-char c = Serial.read(); //Conduct a serial read
-
-if (c == '#')
-
-{
-
-break; //Exit the loop when the # is detected after the word
+void setup() 
+{                                            // put your setup code here, to run once:
+  Serial.begin(9600);
+    Servo1.attach(servoPin1);
+  Servo2.attach(servoPin2);
 
 }
 
-voice += c;
+  int redVal;
+  int greenVal;
+  int blueVal;
 
-}
 
-if (voice.length() > 0)
+void loop() {
+ 
+  while (Serial.available())   //Check if there is an available byte to read
+  {                            
+  delay(10);                   //Delay added to make thing stable
+  char c = Serial.read();      //Conduct a serial read
+  if (c == '#') {break;}       //Exit the loop when the # is detected after the word
+  voice += c;                  //Shorthand for voice = voice + c
+  } 
 
-{
-if(voice == "*hello")
+  if (voice.length() > 0) {
+    Serial.println(voice);
 
-{
 
-Servo1.write(90); 
+       if(voice == "*hi")//       test                        
+     {
 
-}
+    Servo1.write(90); 
+    Servo2.write(0); 
 
-else if(voice == "*bye")
+     }  
+  else if(voice == "*bye")//  test                           
+     {
+    Servo1.write(0); 
+     Servo2.write(90);  
 
-{
-
-Servo1.write(0); 
-
-}
-
-else if(voice == "*start")
-
-{
-
-Servo2.write(90); 
-
-}
-
-else if(voice == "*stop")
-
-{
-
-Servo2.write(0); 
-
-}
-voice=""; //Reset variable
-
-}
-
+     }
+  
+   }
+voice=""; //Reset the variable after initiating
 }
