@@ -18,7 +18,7 @@ String voice;
 
 void loop()
 {
-  if (Serial.available()>0)
+  while (Serial.available()>0)
   {
     voice="";
     voice=Serial.readString();
