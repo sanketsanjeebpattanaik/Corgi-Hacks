@@ -16,31 +16,63 @@ void setup() {
 char c;
 String voice;
 
-void loop() {
-  if (Serial.available()>0)
-  {
-    voice="";
-    voice=Serial.readString();
-    Serial.print(voice+'\n');
-  }
+void loop()
+{
 
-  if(voice=="start")
-  {
-    Servo1.write(90);
-    Servo2.write(90);
-  } else if(voice=="stop")
-  {
-    Servo1.write(0);
-    Servo2.write(0);
-  }
+while (Serial.available()) //Check if there is an available byte to read
 
-if(voice=="hello")
-  {
-    Servo1.write(90);
-    Servo2.write(90);
-  } else if(voice=="bye")
-  {
-    Servo1.write(0);
-    Servo2.write(0);
-  }
+{ delay(10); //Delay added to make thing stable
+
+char c = Serial.read(); //Conduct a serial read
+
+if (c == '#')
+
+{
+
+break; //Exit the loop when the # is detected after the word
+
+}
+
+voice += c;
+
+}
+
+if (voice.length() > 0)
+
+{
+if(voice == "*hello")
+
+{
+
+Servo1.write(90); 
+
+}
+
+else if(voice == "*bye")
+
+{
+
+Servo1.write(0); 
+
+}
+
+else if(voice == "*start")
+
+{
+
+Servo2.write(90); 
+
+}
+
+else if(voice == "*stop")
+
+{
+
+Servo2.write(0); 
+
+}
+voice=""; //Reset variable
+
+}
+
 }
