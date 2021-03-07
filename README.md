@@ -1,6 +1,8 @@
 # Corgpy
 
-The final code for the project is: [corgpy.ino](https://github.com/saswatsamal/Corgi-Hacks/blob/main/corgpy.ino)
+The final code for the project is: [corgpy.ino](./corgpy.ino)
+
+If the above code is not working then use [blutooth_voice_control.ino](./blutooth_voice_control.ino)
 
 Get the app for voice command from: [here](https://play.google.com/store/apps/details?id=robotspace.simplelabs.amr_voice&hl=en) which is developed by [SimpleLabsIN.](https://www.simplelabs.co.in/)
 
@@ -20,6 +22,6 @@ As mentioned it is a smart puppy just for people to play around. A lot of time p
 ## Commands
 Commands | Behavior | Preview
 ------------ | ------------- | -------------
-`Hi` | Eyes lit up and limbs and ears straighten up | <img src = "https://github.com/saswatsamal/Corgi-Hacks/blob/main/gifs/hi.gif" width=200>
-`Cute` | The puppy gets excited and blinks his eyes. | <img src = "https://github.com/saswatsamal/Corgi-Hacks/blob/main/gifs/cute.gif" width=200>
-`Bye` | Eye goes black and limbs goes to the default position | <img src = "https://github.com/saswatsamal/Corgi-Hacks/blob/main/gifs/bye.gif" width=200>
+`Hi` | Eyes lit up and limbs and ears straighten up | <img src = "./gifs/hi.gif" width=200>
+`Cute` | The puppy gets excited and blinks his eyes. | <img src = "./gifs/cute.gif" width=200>
+`Bye` | Eye goes black and limbs goes to the default position | <img src = "./gifs/bye.gif" width=200>
