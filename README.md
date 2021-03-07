@@ -1,5 +1,11 @@
 # Corgpy
 
+The final code for the project is: [corgpy.ino](./corgpy.ino)
+
+If the above code is not working then use [blutooth_voice_control.ino](./blutooth_voice_control.ino)
+
+Get the app for voice command from: [here](https://play.google.com/store/apps/details?id=robotspace.simplelabs.amr_voice&hl=en) which is developed by [SimpleLabsIN.](https://www.simplelabs.co.in/)
+
 ## Introduction
 Corgpy is a smart puppy. He is very lovable and very moody also. He is very happy and cheerful when someone is around him and plays with him. But when no one is around he gets sad and depressed. We enjoy a lot when we play around with him and hope he enterains others also. 
 
@@ -14,7 +20,8 @@ As mentioned it is a smart puppy just for people to play around. A lot of time p
 5. Android App for voice command
 
 ## Commands
-Commands | Behavior
------------- | ------------- 
-Hi | Eyes lit up and limbs and ears straighten up
-Bye | Eye goes black and limbs goes to default position
+Commands | Behavior | Preview
+------------ | ------------- | -------------
+`Hi` | Eyes lit up and limbs and ears straighten up | <img src = "./gifs/hi.gif" width=200>
+`Cute` | The puppy gets excited and blinks his eyes. | <img src = "./gifs/cute.gif" width=200>
+`Bye` | Eye goes black and limbs goes to the default position | <img src = "./gifs/bye.gif" width=200>
