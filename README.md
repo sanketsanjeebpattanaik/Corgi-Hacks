@@ -2,6 +2,8 @@
 
 The final code for the project is: [corgpy.ino](https://github.com/saswatsamal/Corgi-Hacks/blob/main/corgpy.ino)
 
+Get the app for voice command from: [here](https://play.google.com/store/apps/details?id=robotspace.simplelabs.amr_voice&hl=en) which is developed by [SimpleLabsIN.](https://www.simplelabs.co.in/)
+
 ## Introduction
 Corgpy is a smart puppy. He is very lovable and very moody also. He is very happy and cheerful when someone is around him and plays with him. But when no one is around he gets sad and depressed. We enjoy a lot when we play around with him and hope he enterains others also. 
 
